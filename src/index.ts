@@ -3,6 +3,7 @@ import ruleMap from './rules/index';
 export default {
     RuleSource: ruleMap,
     Plugin: {
+        description: "description of my plugin",
         extend: 'some-similar-plugin',     // the plugin you extend here should be trying to achieve the same behaviour. In fact, its plugin value must be of the same shape as your plugin value.
         compute: ['rule-c', 'rule-d', 'my-custom-rule'],
         configure: {
