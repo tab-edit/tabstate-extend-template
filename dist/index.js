@@ -1,7 +1,9 @@
+'use strict';
+
 var ruleMap = {
-    "my-custom-rule": () => import('./my-custom-rule-8a847445.js'),
-    "new-rule-a": () => import('./new-rule-a-d541f07a.js'),
-    "new-rule-b": () => import('./new-rule-b-c78509d3.js'),
+    "my-custom-rule": () => Promise.resolve().then(function () { return require('./my-custom-rule-5ae7c1c9.js'); }),
+    "new-rule-a": () => Promise.resolve().then(function () { return require('./new-rule-a-01b9bc1c.js'); }),
+    "new-rule-b": () => Promise.resolve().then(function () { return require('./new-rule-b-971547f6.js'); }),
 };
 
 var index = {
@@ -24,4 +26,4 @@ var index = {
     }
 };
 
-export { index as default };
+module.exports = index;
