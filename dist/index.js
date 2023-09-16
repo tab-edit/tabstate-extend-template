@@ -1,14 +1,14 @@
 'use strict';
 
 var ruleMap = {
-    "my-custom-rule": () => Promise.resolve().then(function () { return require('./my-custom-rule-5ae7c1c9.js'); }),
-    "new-rule-a": () => Promise.resolve().then(function () { return require('./new-rule-a-01b9bc1c.js'); }),
-    "new-rule-b": () => Promise.resolve().then(function () { return require('./new-rule-b-971547f6.js'); }),
+    "my-custom-rule": () => require("./my-custom-rule"),
+    "new-rule-a": () => require("./new-rule-a"),
+    "new-rule-b": () => require("./new-rule-b"),
 };
 
 var index = {
-    RuleSource: ruleMap,
-    Plugin: {
+    ruleSource: ruleMap,
+    plugin: {
         description: "description of my plugin",
         extend: 'some-similar-plugin',
         compute: ['rule-c', 'rule-d', 'my-custom-rule'],
